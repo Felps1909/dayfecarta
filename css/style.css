@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container{
+  
+    width: 100%;
+    height: auto;
+    background-image: url("../img/fundo.svg");
+    background-size: contain;
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+   justify-content: center;
+    padding: 3rem 0;
+    
+}
+.carta-fechada{
+    background-image: url("../img/carta-fechada.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40vw;
+    height: 89.1vh;
+}
+.carta-fechada:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.carta-aberta{
+    
+    /* margin: 2rem; */
+    padding: 0 2rem;
+    width: 70vw;
+    height:auto;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas de tamanho igual */
+    /*grid-template-rows: 1fr 1fr;    /* Duas linhas de tamanho igual */
+    /*gap: 3rem; */
+    margin: 2rem 0;
+}
+.content-carta1,.content-carta2,.content-carta3,.content-carta4{
+   /* display: flex;*/
+   display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E85656;
+    border-radius: 30px;
+    border-style: double;
+    /*border: 5px double white;*/
+    border-color: white;
+    padding: 1rem 4rem;
+
+}
+.carta-aberta  h1{
+    font-family: "Loved by the King", cursive;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    margin: 1rem;
+    text-align: center;
+} 
+.carta-aberta   .text-carta p{
+ 
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-style: normal;
+     
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.text-carta{
+    padding-bottom: 1rem;
+}
+.btn-next-month{
+    float: right;
+    background-color: white;
+    height: 6vh;
+    width: 13vw;
+    margin: 2rem;
+    border-radius: 10px;
+}
+.content-btn-next-month{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  
+}
+.content-btn-next-month span{
+    color: #E85656;
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.btn-next-month:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.btn-prev-month{
+    float: left;
+    background-color: white;
+    height: 6vh;
+    width: 13vw;
+    margin: 2rem;
+    border-radius: 10px;
+}
+.btn-prev-month:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+/*RESPONSIVEEE*/
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    .carta-fechada{
+        width: 90%;
+    }
+    .content-carta1,.content-carta2,.content-carta3,.content-carta4{
+        padding: 1rem 1rem;
+        width: 90vw;
+    }
+    .btn-prev-month,.btn-next-month{
+        width: 85%;
+        height: 7vw;
+    }
+
+}
